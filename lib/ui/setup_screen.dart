@@ -33,7 +33,7 @@ class _SetupScreenState extends State<SetupScreen> {
         automaticallyImplyLeading: !widget.firstRun,
       ),
       body: ListView(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 110),
         children: [
           if (widget.firstRun)
             Card(
@@ -172,7 +172,7 @@ class _SetupScreenState extends State<SetupScreen> {
                 minimumSize: const Size.fromHeight(52)),
             child: Text(widget.firstRun ? '保存并开始使用' : '保存'),
           ),
-          const SizedBox(height: 32),
+          const SizedBox(height: 110),
         ],
       ),
     );

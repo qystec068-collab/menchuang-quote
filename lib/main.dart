@@ -72,7 +72,7 @@ class _HomeShellState extends State<HomeShell> {
             index: _index,
             children: [
               QuoteScreen(onAdded: () => setState(() => _index = 1)),
-              const OrderScreen(),
+              OrderScreen(onAddItem: () => setState(() => _index = 0)),
               const HistoryScreen(),
             ],
           ),

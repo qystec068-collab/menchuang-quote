@@ -41,7 +41,7 @@ class HistoryScreen extends StatelessWidget {
     }
 
     return ListView(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 110),
       children: [
         Card(
           child: Padding(
@@ -81,7 +81,7 @@ class HistoryScreen extends StatelessWidget {
             ),
           );
         }),
-        const SizedBox(height: 32),
+        const SizedBox(height: 110),
       ],
     );
   }

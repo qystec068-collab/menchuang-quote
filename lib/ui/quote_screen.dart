@@ -69,7 +69,7 @@ class _QuoteScreenState extends State<QuoteScreen> {
     final result = _compute();
 
     return ListView(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 110),
       children: [
         const SectionTitle('选型材'),
         Row(
@@ -216,8 +216,8 @@ class _QuoteScreenState extends State<QuoteScreen> {
               _h.clear();
               _len.clear();
               _qtyOverride.clear();
-              ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('已加入订单')));
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text('已加入订单,回到「订单」页看合计')));
               widget.onAdded?.call();
             },
             style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(48)),

@@ -7,7 +7,9 @@ import 'common.dart';
 
 /// 当前订单:一个订单里可以有好几个项目(门 / 窗 / 栏杆 ...),最后出总价。
 class OrderScreen extends StatefulWidget {
-  const OrderScreen({super.key});
+  final VoidCallback? onAddItem;
+
+  const OrderScreen({super.key, this.onAddItem});
 
   @override
   State<OrderScreen> createState() => _OrderScreenState();
@@ -36,7 +38,7 @@ class _OrderScreenState extends State<OrderScreen> {
     final q = OrderCalculator(store.priceTable).quote(draft);
 
     return ListView(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 110),
       children: [
         const SectionTitle('客户'),
         TextFieldBox(label: '客户名', controller: _customer,
@@ -57,10 +59,18 @@ class _OrderScreenState extends State<OrderScreen> {
           ],
         ),
         const SectionTitle('项目'),
+        OutlinedButton.icon(
+          onPressed: widget.onAddItem,
+          icon: const Icon(Icons.add, size: 18),
+          label: const Text('添加项目'),
+          style: OutlinedButton.styleFrom(
+              minimumSize: const Size.fromHeight(44)),
+        ),
         if (draft.items.isEmpty)
           const Padding(
             padding: EdgeInsets.symmetric(vertical: 12),
-            child: Text('还没有项目,去「计价」页算好一项点「加入订单」',
+            child: Text(
+                '还没有项目。\n点上面「添加项目」→ 选型材、填尺寸 → 点「加入订单」,会回到这里。',
                 style: TextStyle(color: Colors.grey)),
           ),
         ...List.generate(q.items.length, (i) {
@@ -98,7 +108,7 @@ class _OrderScreenState extends State<OrderScreen> {
           children: [
             Expanded(
                 child: NumField(
-                    label: '优惠(填负数,如 -100)',
+                    label: '优惠(填负数)',
                     controller: _discount,
                     onChanged: () => store.updateDraft(
                         discount: double.tryParse(_discount.text) ?? 0))),
