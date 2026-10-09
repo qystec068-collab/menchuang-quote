@@ -1,0 +1,103 @@
+{
+  "shopName": "示例门窗店(单价请改成你自己的)",
+  "shopPhone": "13800000000",
+  "currency": "¥",
+  "roundTotal": "yuan",
+  "categories": ["门", "窗", "栏杆", "扶手", "雨棚", "纱窗", "其他"],
+  "series": [
+    {
+      "id": "tz60",
+      "category": "门",
+      "name": "断桥铝 60 系列(平开门)",
+      "material": "断桥铝",
+      "unit": "sqm",
+      "price": 520,
+      "wallThicknessMm": 1.4,
+      "glassNote": "5+12A+5 中空钢化",
+      "minChargeQty": 1.0,
+      "deductPerSideMm": 15
+    },
+    {
+      "id": "tz70",
+      "category": "窗",
+      "name": "断桥铝 70 系列",
+      "material": "断桥铝",
+      "unit": "sqm",
+      "price": 620,
+      "wallThicknessMm": 1.8,
+      "glassNote": "5+18A+5 中空钢化",
+      "minChargeQty": 0,
+      "deductPerSideMm": 15
+    },
+    {
+      "id": "tz108",
+      "category": "窗",
+      "name": "断桥铝 108 系列(窗纱一体)",
+      "material": "断桥铝",
+      "unit": "sqm",
+      "price": 680,
+      "wallThicknessMm": 1.8,
+      "glassNote": "5+20A+5 中空钢化",
+      "minChargeQty": 0,
+      "deductPerSideMm": 15
+    },
+    {
+      "id": "pt70",
+      "category": "窗",
+      "name": "普通铝合金 70 系列",
+      "material": "普通铝合金",
+      "unit": "sqm",
+      "price": 280,
+      "wallThicknessMm": 1.2,
+      "glassNote": "5mm 单玻",
+      "minChargeQty": 0,
+      "deductPerSideMm": 15
+    },
+    {
+      "id": "lt-ss",
+      "category": "栏杆",
+      "name": "不锈钢栏杆(304)",
+      "material": "不锈钢",
+      "unit": "meter",
+      "price": 320,
+      "wallThicknessMm": 1.0,
+      "glassNote": "",
+      "minChargeQty": 0,
+      "deductPerSideMm": 0
+    },
+    {
+      "id": "fs-ss",
+      "category": "扶手",
+      "name": "不锈钢扶手(304)",
+      "material": "不锈钢",
+      "unit": "meter",
+      "price": 260,
+      "wallThicknessMm": 1.0,
+      "glassNote": "",
+      "minChargeQty": 0,
+      "deductPerSideMm": 0
+    },
+    {
+      "id": "sc-pc",
+      "category": "纱窗",
+      "name": "金刚网纱窗(按樘)",
+      "material": "金刚网",
+      "unit": "piece",
+      "price": 150,
+      "wallThicknessMm": 0,
+      "glassNote": "",
+      "minChargeQty": 0,
+      "deductPerSideMm": 0
+    }
+  ],
+  "extras": [
+    { "id": "install", "name": "安装费", "mode": "perSqm", "price": 35, "defaultOn": true },
+    { "id": "transport", "name": "运输", "mode": "fixed", "price": 80, "defaultOn": true },
+    { "id": "remove", "name": "拆旧", "mode": "fixed", "price": 200, "defaultOn": false },
+    { "id": "floorfee", "name": "楼层费", "mode": "perFloor", "price": 20, "defaultOn": false },
+    { "id": "post", "name": "立柱/横杆", "mode": "perMeter", "price": 45, "defaultOn": false },
+    { "id": "corner", "name": "转角/加立柱", "mode": "perPiece", "price": 150, "defaultOn": false },
+    { "id": "glassUp", "name": "玻璃升级(加厚/夹胶)", "mode": "perSqm", "price": 60, "defaultOn": false },
+    { "id": "profit", "name": "管理+利润", "mode": "percent", "price": 3, "defaultOn": false }
+  ]
+}
